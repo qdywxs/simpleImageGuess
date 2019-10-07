@@ -13,20 +13,19 @@
   </style>
 
   <script>
-    //为了讲解原理，这里我们依然将 JS 代码放在此处。
     window.onload = init;
     function init() {
       var image = document.getElementById("zero");
-      image.onclick = showAnswer;  //将一个“处理程序”赋值给从 DOM 中获取的图像对象的 onclick 属性。
+      image.onclick = showAnswer;
     }
     function showAnswer() {
-      var image = document.getElementById("zero");  //首先，由于“事件处理程序被调用的时间不同”以及“函数作用域规则”的原因，必须再次从 DOM 获取该图像元素。
-      image.src = "zero.png" //获得图像元素后，就可以修改它了。
+      var image = document.getElementById("zero");
+      image.src = "zero.png"
     }
   </script>
 
 </head>
 <body>
-  <img id="zero" src="zeroblur.png">  <!--网页默认显示的是模糊图像。我们把它的 id 指定为 zero-->
+  <img id="zero" src="zeroblur.png">
 </body>
 </html>
